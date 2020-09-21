@@ -1,0 +1,9 @@
+<h1> Artists </h1>
+
+<ul>
+    <% @artists.each do |art| %>
+        <li> <%= link_to art.name, artist_path(art) %> </li>
+    <% end %>
+</ul>
+
+<%= button_to "Link instrument with artist", new_artist_instrument_path %>

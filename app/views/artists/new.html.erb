@@ -1,0 +1,18 @@
+<h3> New Artist Registration </h3>
+
+<% if flash[:errors] %>
+    <% flash[:errors].each do |error| %>
+        <p style="color:red"><%= error %><p>
+    <% end %>
+<% end %>
+    
+
+<%= form_for @artist do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %><br>
+    <%= f.label :title %>
+    <%= f.text_field :title %><br>
+    <%= f.label :age %>
+    <%= f.number_field :age %><br>
+    <%= f.submit "Add artist" %>
+<% end %>

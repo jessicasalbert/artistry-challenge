@@ -1,0 +1,8 @@
+<%= form_for @artist_instrument do |f| %>
+    <%= f.label "Pick an artist" %><br>
+    <%= f.collection_select :artist_id, Artist.all, :id, :name %><br><br>
+    <%= f.label "Pick an instrument" %> <br>
+    <%= f.collection_select :instrument_id, Instrument.all, :id, :name %><br><br>
+    <%= f.submit "Update" %>
+<% end %>
+
